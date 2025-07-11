@@ -1,0 +1,17 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <https://KANAKOf48.github.io/semanticweb/test.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:人間 a rdfs:Class .
+
+ex:作家 a rdfs:Class ;
+    rdfs:subClassOf ex:人間 .
+
+ex:小説 a rdfs:Class .
+
+ex:こころ dct:creator ex:夏目漱石 .
+
+dct:creator a rdf:Property ;
+    rdfs:domain ex:小説 ;
+    rdfs:range ex:作家 .
